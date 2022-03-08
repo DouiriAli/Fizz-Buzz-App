@@ -63,7 +63,7 @@ class FizzBuzzFirstFragment : BaseFragment() {
                 Status.LOADING -> {
                     /* Nothing */
                 }
-                else -> {
+                Status.ERROR  -> {
                     notify(R.string.form_error_message)
                 }
             }
