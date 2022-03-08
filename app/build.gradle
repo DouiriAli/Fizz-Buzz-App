@@ -47,9 +47,6 @@ dependencies {
 
     // Testing
     testImplementation libs.junit
-    testImplementation libs.nhaarman_mockito_kotlin
-    testImplementation libs.mockito.inline
-    testImplementation libs.androidx.arch_core_testing
 
     // Koin
     implementation libs.koin.android

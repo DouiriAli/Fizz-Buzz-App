@@ -20,13 +20,6 @@ def koin = [:]
 koin.android = "io.insert-koin:koin-android:$versions.koin_version"
 koin.androidx_viewmodel = "io.insert-koin:koin-androidx-viewmodel:$versions.koin_version"
 
-def mockito = [:]
-mockito.android = "org.mockito:mockito-android:$versions.mockito.android"
-mockito.core = "org.mockito:mockito-core:$versions.mockito.core"
-mockito.inline = "org.mockito:mockito-inline:$versions.mockito.inline"
-
-def nhaarman_mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito.kotlin"
-
 def android_material = "com.google.android.material:material:$versions.material"
 
 def junit = "junit:junit:$versions.junit"
@@ -36,6 +29,4 @@ ext.libs.androidx = androidx
 ext.libs.material = android_material
 ext.libs.junit = junit
 ext.libs.koin = koin
-ext.libs.mockito = mockito
-ext.libs.nhaarman_mockito_kotlin = nhaarman_mockito_kotlin
 ext.libs.reactivex = reactivex
