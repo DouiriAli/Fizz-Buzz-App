@@ -10,7 +10,6 @@ androidx.appcompat = "androidx.appcompat:appcompat:$versions.androidx.appcompat"
 androidx.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
 androidx.navigation_fragment = "androidx.navigation:navigation-fragment-ktx:$versions.androidx.navigation"
 androidx.navigation_ui = "androidx.navigation:navigation-ui-ktx:$versions.androidx.navigation"
-androidx.arch_core_testing = "androidx.arch.core:core-testing:$versions.androidx.core_testing"
 
 def reactivex = [:]
 reactivex.rxjava2_android = "io.reactivex.rxjava2:rxandroid:$versions.rx.android"
