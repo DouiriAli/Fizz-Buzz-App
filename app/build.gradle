@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.rss.fizzbuzzapp"
+        minSdk versions.min_sdk_version
+        targetSdk versions.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core_ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.navigation_fragment
+    implementation libs.androidx.navigation_ui
+
+    // Testing
+    testImplementation libs.junit
+    testImplementation libs.nhaarman_mockito_kotlin
+    testImplementation libs.mockito.inline
+    testImplementation libs.androidx.arch_core_testing
+
+    // Koin
+    implementation libs.koin.android
+    implementation libs.koin.androidx_viewmodel
+
+    // Rx
+    implementation libs.reactivex.rxjava2_android
+    implementation libs.reactivex.rxjava2_kotlin
+
+    implementation project(":domain")
+}

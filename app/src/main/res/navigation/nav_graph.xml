@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FizzBuzzFirstFragment">
+
+    <fragment
+        android:id="@+id/FizzBuzzFirstFragment"
+        android:name="com.rss.fizzbuzzapp.firstscreen.FizzBuzzFirstFragment"
+        android:label="@string/fizz_buzz_first_fragment_label"
+        tools:layout="@layout/fragment_fizz_buzz_first">
+
+        <action
+            android:id="@+id/action_FizzBuzzFirstFragment_to_FizzBuzzSecondFragment"
+            app:destination="@id/FizzBuzzSecondFragment">
+
+            <argument
+                android:name="fizzBuzzUiModel"
+                app:argType="com.rss.fizzbuzzapp.model.FizzBuzzUiModel"/>
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FizzBuzzSecondFragment"
+        android:name="com.rss.fizzbuzzapp.secondscreen.FizzBuzzSecondFragment"
+        android:label="@string/fizz_buzz_second_fragment_label"
+        tools:layout="@layout/fragment_fizz_buzz_second">
+
+        <argument
+            android:name="fizzBuzzUiModel"
+            app:argType="com.rss.fizzbuzzapp.model.FizzBuzzUiModel"/>
+
+    </fragment>
+
+</navigation>

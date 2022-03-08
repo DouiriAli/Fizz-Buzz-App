@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fizz Buzz Application</string>
+    <string name="fizz_buzz_first_fragment_label">Fizz Buzz First Fragment</string>
+    <string name="fizz_buzz_second_fragment_label">Fizz Buzz Second Fragment</string>
+
+    <string name="int1">Enter First Integer</string>
+    <string name="int2">Enter Second Integer</string>
+    <string name="limit">Enter The Limit</string>
+    <string name="str1">Enter First String</string>
+    <string name="str2">Enter Second String</string>
+    <string name="find_fizz_buzz_button">Find Fizz Buzz</string>
+    <string name="form_error_message">Please fill all required fields</string>
+</resources>

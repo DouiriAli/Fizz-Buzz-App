@@ -1,0 +1,41 @@
+//
+// Access to all dependencies in build.gradle files
+//
+
+apply from: 'versions.gradle'
+
+def androidx = [:]
+androidx.core_ktx = "androidx.core:core-ktx:$versions.androidx.core_ktx"
+androidx.appcompat = "androidx.appcompat:appcompat:$versions.androidx.appcompat"
+androidx.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
+androidx.navigation_fragment = "androidx.navigation:navigation-fragment-ktx:$versions.androidx.navigation"
+androidx.navigation_ui = "androidx.navigation:navigation-ui-ktx:$versions.androidx.navigation"
+androidx.arch_core_testing = "androidx.arch.core:core-testing:$versions.androidx.core_testing"
+
+def reactivex = [:]
+reactivex.rxjava2_android = "io.reactivex.rxjava2:rxandroid:$versions.rx.android"
+reactivex.rxjava2_kotlin = "io.reactivex.rxjava2:rxkotlin:$versions.rx.kotlin"
+
+def koin = [:]
+koin.android = "io.insert-koin:koin-android:$versions.koin_version"
+koin.androidx_viewmodel = "io.insert-koin:koin-androidx-viewmodel:$versions.koin_version"
+
+def mockito = [:]
+mockito.android = "org.mockito:mockito-android:$versions.mockito.android"
+mockito.core = "org.mockito:mockito-core:$versions.mockito.core"
+mockito.inline = "org.mockito:mockito-inline:$versions.mockito.inline"
+
+def nhaarman_mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito.kotlin"
+
+def android_material = "com.google.android.material:material:$versions.material"
+
+def junit = "junit:junit:$versions.junit"
+
+ext.libs = [:]
+ext.libs.androidx = androidx
+ext.libs.material = android_material
+ext.libs.junit = junit
+ext.libs.koin = koin
+ext.libs.mockito = mockito
+ext.libs.nhaarman_mockito_kotlin = nhaarman_mockito_kotlin
+ext.libs.reactivex = reactivex
